@@ -50,6 +50,7 @@ module "gke" {
   enable_private_endpoint = true
   enable_private_nodes    = true
   remove_default_node_pool = true
+  Auto_repair 
   master_ipv4_cidr_block  = "172.16.0.0/28"
 
   master_authorized_networks = [
@@ -128,6 +129,11 @@ module "gke" {
      # cpu_manager_policy = "static"
      # cpu_cfs_quota      = true
     },
+    
+    management {
+    auto_repair  = true
+    auto_upgrade = false
+  }
   ]
 
   node_pools_oauth_scopes = {
