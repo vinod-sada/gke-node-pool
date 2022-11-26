@@ -128,11 +128,6 @@ module "gke" {
      # cpu_manager_policy = "static"
      # cpu_cfs_quota      = true
     },
-    
-    management {
-    auto_repair  = true
-    auto_upgrade = false
-  }
   ]
 
   node_pools_oauth_scopes = {
